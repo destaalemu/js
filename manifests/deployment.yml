@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: ironoapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ironoapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ironoapipelinesjavascriptdocker 
+          image: alessiotest.azurecr.io/ironoapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
